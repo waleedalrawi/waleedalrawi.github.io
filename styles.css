@@ -1,0 +1,353 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 3vmin;
+}
+body{
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* GRID FOR THE PROJECTS PAGE */
+.grid-projects{
+    display: grid;
+    gap: 5vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    grid-template-rows: 10vh 25vh 65vh 25vh 10vh;
+    grid-template-areas: 'nav nav nav nav nav'
+                         ' .   .   .   .   . '
+                         ' .   a   b   c   . '
+                         ' .   .   .   .   . '
+                         'ftr ftr ftr ftr ftr';
+                     
+}
+
+/* cards in project page */
+
+.carda{
+    grid-area: a;
+    font-size: .75em;
+}
+.cardb{
+    grid-area: b;
+    font-size: .75em;
+}
+.cardc{
+    grid-area: c;
+    font-size: .75em;
+}
+
+.card > img{
+    height: 18vh;
+}
+.carda > img{
+    max-width: 18vh;
+    place-self: center;
+}
+
+.card a{
+    width: 10vw;
+    font-size: 1.2em;
+}
+.card a img{
+    width: 5vw;
+}
+
+
+
+
+
+/* Grid for the homepage */
+.grid{
+    display: grid;
+    gap: 5vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    grid-template-columns: 4fr 1fr 5fr 5fr 1fr 4fr;
+    grid-template-rows: 10vh 10vh 20vh 30vh 10vh 50vh 45vh 15vh 20vh 20vh 10vh;
+    grid-template-areas: ' nav nav nav nav nav nav '
+                         '  a   a   a  pic pic pic '
+                         '  .   b   b  pic pic pic '
+                         '  .   .   .  pic pic pic '
+                         '  .   .   .   c   c   c  '
+                         ' vid vid vid vid  .   .  '
+                         '  .  bio bio bio bio  .  '
+                         '  .  prj prj prj prj  .  '
+                         '  .  ct1 ct1 ct2 ct2  .  '
+                         '  .   .  ct3 ct3  .   .  '
+                         ' ftr ftr ftr ftr ftr ftr ';
+
+    
+    text-align: center;
+    
+}
+
+
+.nav-wrapper{
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    display: grid;
+    align-items: center;  
+    
+}
+.nav{
+
+    /* background-color: #2d2353; */
+    background: linear-gradient(to right, #2d2353,#8575c5);
+    border-radius: 20px;
+    height: 75%;
+
+
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr 1fr 9fr;
+    align-items: center;
+    
+}
+
+.nav a:nth-child(1){
+    grid-column: 1;
+    justify-self: center;
+}
+.nav a:nth-child(2){
+    grid-column: 2;
+    justify-self: end;
+}
+.nav a:nth-child(3){
+    grid-column: 5;
+    justify-self: start;
+}
+
+.name{
+    grid-area: a;
+    font-size: 2em;
+
+}
+.arrow{
+    grid-area: b;
+    font-size: 4em;
+    text-align: end;
+}
+.pic{
+    grid-area: pic;
+    place-self: center;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+
+.title{
+    grid-area: c;
+    font-size: 1.3em;
+}
+.video{
+    grid-area: vid;
+    max-height: 100%;
+}
+.bio{
+    grid-area: bio;
+    place-self: center;
+}
+.projects{
+    grid-area: prj;
+    place-self: center;
+}
+.contact1{
+    grid-area: ct1;
+}
+.contact2{
+    grid-area: ct2;
+}
+.contact3{
+    grid-area: ct3;
+}
+
+footer{
+    grid-area: ftr;
+    font-size: .5em;
+    text-align: center;
+    place-self: center;
+}
+
+/* styling links */
+a{
+    transition: 0.5s ease-in-out;
+    color:lightseagreen
+
+}
+a:hover{
+    transform: scale(1.20);
+}
+
+
+
+/* ANIMATED BACKGROUND */
+body{
+    position: absolute;
+}
+
+.wrapper{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right,#3f87a6, #a63f63);
+}
+
+.box div{
+    position: absolute;
+    top:200px;
+    width: 120px;
+    height: 120px;
+    /* background-color: transparent; */
+    background-image: url("space.png");
+    background-position: center;
+}
+
+.box div:nth-child(1){
+    top: 5%;
+    left: 1%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(2){
+    top: 8%;
+    left: 30%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3){
+    top: 6;
+    left: 55%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(4){
+    top: 15%;
+    left: 45%;
+    animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(5){
+    top: 20%;
+    left: 13%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(6){
+    top: 6%;
+    left: 91%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(7){
+    top: 27%;
+    left: 35%;
+    animation: animate 14s linear infinite;
+}
+
+.box div:nth-child(8){
+    top: 33%;
+    left: 50%;
+    animation: animate 11s linear infinite;
+}
+
+.box div:nth-child(9){
+    top: 31%;
+    left: 85%;
+    animation: animate 6s linear infinite;
+}
+
+.box div:nth-child(10){
+    top: 42%;
+    left: 70%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(11){
+    top: 50%;
+    left: 95%;
+    animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(12){
+    top: 58%;
+    left: 2%;
+    animation: animate 10s linear infinite;
+}
+.box div:nth-child(13){
+    top: 60%;
+    left: 60%;
+    animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(14){
+    top: 65%;
+    left: 15%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(15){
+    top: 70%;
+    left: 85%;
+    animation: animate 10s linear infinite;
+}
+
+
+.box div:nth-child(16){
+    top: 77%;
+    left: 5%;
+    animation: animate 14s linear infinite;
+}
+
+.box div:nth-child(17){
+    top: 80%;
+    left: 45%;
+    animation: animate 8s linear infinite;
+}
+
+.box div:nth-child(18){
+    top: 83%;
+    left: 90%;
+    animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(19){
+    top: 90%;
+    left: 15%;
+    animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(20){
+    top: 95%;
+    left: 75%;
+    animation: animate 12s linear infinite;
+}
+
+
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: scale(0) translateY(0) rotate(-180deg);
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(1.3) translateY(-50px) rotate(180deg);
+        opacity: 0;
+    }
+    
+}
+
+/* END ANIMATED BACKGROUND */
